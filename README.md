@@ -1,2 +1,2 @@
 # iDoc
-# Its a clinic Management system
+Its a clinic Management system
