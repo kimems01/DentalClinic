@@ -1,0 +1,67 @@
+@model HMS.Models.CheckupSummaryViewModel.ManageCheckupViewModel
+
+@{ ViewData["Title"] = "Create"; }
+
+<div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.BPSystolic" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.BPSystolic" id="BPSystolic" max="300" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.BPSystolic" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.BPDiastolic" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.BPDiastolic" id="BPDiastolic" max="300" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.BPDiastolic" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.RespirationRate" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.RespirationRate" id="RespirationRate" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.RespirationRate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.Temperature" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.Temperature" id="Temperature" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.Temperature" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.PulseRate" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.PulseRate" id="PulseRate" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.PulseRate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.Weight" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.Weight" id="Weight" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.Weight" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.Height" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.Height" id="Height" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.Height" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="VitalSignsCRUDViewModel.Spo2" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="VitalSignsCRUDViewModel.Spo2" id="Spo2" class="form-control" />
+            <span asp-validation-for="VitalSignsCRUDViewModel.Spo2" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="VitalSignsCRUDViewModel.NursingNotes" class="control-label"></label>
+        <textarea asp-for="VitalSignsCRUDViewModel.NursingNotes" id="NursingNotes" class="form-control"></textarea>
+        <span asp-validation-for="VitalSignsCRUDViewModel.NursingNotes" class="text-danger"></span>
+    </div>
+</div>

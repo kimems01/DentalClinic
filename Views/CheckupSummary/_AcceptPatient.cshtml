@@ -1,0 +1,81 @@
+@model HMS.Models.CheckupSummaryViewModel.ManageCheckupViewModel
+
+@{
+    ViewData["Title"] = "Accept Patient";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div hidden>
+                    <input asp-for="CheckupSummaryCRUDViewModel.Id" id="Id" />
+                    <input asp-for="CheckupSummaryCRUDViewModel.VisitId" id="VisitId" />
+                    <input asp-for="CheckupSummaryCRUDViewModel.PaymentId" id="PaymentId" />
+                    <input asp-for="CheckupSummaryCRUDViewModel.CreatedDate" id="CreatedDate" />
+                    <input asp-for="CheckupSummaryCRUDViewModel.CreatedBy" id="CreatedBy" />
+
+                    <input asp-for="PatientTestCRUDViewModel.Id" id="PatientTestId" />
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="CheckupSummaryCRUDViewModel.PatientId" class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-9">
+                        <select asp-for="CheckupSummaryCRUDViewModel.PatientId"
+                                asp-items="@ViewBag._LoadddlPatientName" id="PatientId" class="form-control"
+                                style="width:100%;">
+                            <option disabled selected>--- SELECT ---</option>
+                        </select>
+                        <span asp-validation-for="CheckupSummaryCRUDViewModel.PatientId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="CheckupSummaryCRUDViewModel.PatientType"
+                            class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-9">
+                        <select asp-for="CheckupSummaryCRUDViewModel.PatientType" id="PatientType"
+                                class="form-control" style="width:100%;">
+                            <option value="1">Out Patient</option>
+                            <option value="2">In Patient</option>
+                        </select>
+                        <span asp-validation-for="CheckupSummaryCRUDViewModel.PatientType"
+                                class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="CheckupSummaryCRUDViewModel.DoctorId" class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-9">
+                        <select asp-for="CheckupSummaryCRUDViewModel.DoctorId"
+                                asp-items="@ViewBag._LoadddlDoctorName" id="DoctorId" class="form-control"
+                                style="width:100%;">
+                            <option disabled selected>--- SELECT ---</option>
+                        </select>
+                        <span asp-validation-for="CheckupSummaryCRUDViewModel.DoctorId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-5 col-sm-5">
+                </div>
+                <div class="col-7 col-sm-7">
+                    <div class="form-group">
+                        <input type="button" id="btnSave" value="Save" onclick="SaveCheckup(true)" class="btn btn-info">
+                        <button type="button" id="btnClose" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#PatientId").select2();
+        $("#DoctorId").select2();
+    });
+</script>

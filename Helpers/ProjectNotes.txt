@@ -1,0 +1,52 @@
+﻿
+
+
+Lat and long:
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_geolocation
+https://github.com/eKoopmans/html2pdf.js
+<script src="~/lib/printThis.js"></script>
+
+
+http://hms.allprojectworks.com/
+
+
+
+Entity:
+1. Manage Bed:
+BedCategories: Id, Name, Description
+Bed: Id, BedCategoryId, No, Description
+BedAllotments: Id, BedCategoryId, BedNo, AllotmentDate, DischargeDate, Notes
+
+
+
+2. Manage Lab
+LabTestCategories: Id, Name, Description
+LabTests: Id, LabTestCategoryId, LabTestName, Unit, ReferenceRange, Status
+
+PatientTest: Id, PatientId, ConsultantId, TestDate, DeliveryDate, PaymentStatus: Pending, Delivered
+TestDetail: Id, TestName, Result, Remarks
+
+
+
+3. Manage Finance
+PaymentCategories: Id, Name, Description
+ExpenseCategories: Id, Name, Description
+Payments: Consulting Charge....
+Expenses: Id, ExpenseCategoriesId, Amount
+
+
+
+
+4. Manage Checkup History
+Checkup: Id, Doctor, Symptoms, Diagnosis, CheckupDate, 
+Prescription: Medication, No.of Days, When to take, Before Meal?, ExtraNotes
+
+
+
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 5.0.0
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+dotnet publish -c Release -p:UseAppHost=false

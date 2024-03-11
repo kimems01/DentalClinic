@@ -1,0 +1,67 @@
+@model HMS.Models.VitalSignsViewModel.VitalSignsCRUDViewModel
+
+@{ ViewData["Title"] = "Create"; }
+
+<div>
+    <div class="form-group row">
+        <label asp-for="Temperature" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="Temperature" class="form-control" />
+            <span asp-validation-for="Temperature" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="BPSystolic" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="BPSystolic" class="form-control" />
+            <span asp-validation-for="BPSystolic" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="BPDiastolic" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="BPDiastolic" class="form-control" />
+            <span asp-validation-for="BPDiastolic" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="RespirationRate" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="RespirationRate" class="form-control" />
+            <span asp-validation-for="RespirationRate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="PulseRate" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="PulseRate" class="form-control" />
+            <span asp-validation-for="PulseRate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Weight" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="Weight" class="form-control" />
+            <span asp-validation-for="Weight" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Height" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="Height" class="form-control" />
+            <span asp-validation-for="Height" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Spo2" class="col-sm-5 col-form-label"></label>
+        <div class="col-sm-7">
+            <input asp-for="Spo2" class="form-control" />
+            <span asp-validation-for="Spo2" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="NursingNotes" class="control-label"></label>
+        <textarea asp-for="NursingNotes" class="form-control"></textarea>
+        <span asp-validation-for="NursingNotes" class="text-danger"></span>
+    </div>
+</div>
