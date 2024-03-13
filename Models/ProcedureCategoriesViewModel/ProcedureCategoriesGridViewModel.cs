@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace HMS.Models
+namespace HMS.Models.ProcedureCategoriesViewModel
 {
-    public class ProcedureCategories : EntityBase
+    public class ProcedureCategoriesGridViewModel : EntityBase
     {
         public Int64 Id { get; set; }
         public string Name { get; set; }

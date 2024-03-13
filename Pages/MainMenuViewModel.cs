@@ -39,7 +39,7 @@
         public bool LabTestCategories { get; set; }
         public bool LabTests { get; set; }
 
-        public bool ProceduresCategories { get; set; }
+        public bool ProcedureCategories { get; set; }
         public bool Procedures { get; set; }
 
         public bool LabTestConfiguration { get; set; }

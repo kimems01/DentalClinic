@@ -212,6 +212,7 @@ namespace HMS.Pages
             public const string PageName = "Procedure Categories";
             public const string Path = "/ProcedureCategories/Index";
         }
+
         public static class Procedures
         {
             public const string PageName = "Medical Procedures";
